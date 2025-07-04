@@ -1,6 +1,6 @@
 <?php
 
-namespace Webbingbrasil\FilamentCopyActions\Tables;
+namespace NhanChauKP\FilamentCopyActions\Tables;
 
 use Closure;
 use Filament\Resources\RelationManagers\RelationManager;
@@ -10,11 +10,11 @@ class CopyableTextColumn extends TextColumn
 {
     protected string $view = 'filament-copyactions::columns.copyable-text-column';
 
-    protected string | bool | Closure | null $icon = 'heroicon-o-clipboard-document';
+    protected string|Closure|bool|null|\BackedEnum $icon = 'heroicon-o-clipboard-document';
 
-    protected bool | Closure $copyWithDescription = false;
+    protected bool|Closure $copyWithDescription = false;
 
-    protected bool | Closure $isOnlyIcon = false;
+    protected bool|Closure $isOnlyIcon = false;
 
     public function setUp(): void
     {
@@ -34,7 +34,7 @@ class CopyableTextColumn extends TextColumn
             });
     }
 
-    public function onlyIcon(bool | Closure $isOnlyIcon = true): static
+    public function onlyIcon(bool|Closure $isOnlyIcon = true): static
     {
         $this->isOnlyIcon = $isOnlyIcon;
 
@@ -46,7 +46,7 @@ class CopyableTextColumn extends TextColumn
         return $this->evaluate($this->isOnlyIcon);
     }
 
-    public function copyWithDescription(bool | Closure $copyWithDescription = true): self
+    public function copyWithDescription(bool|Closure $copyWithDescription = true): self
     {
         $this->copyWithDescription = $copyWithDescription;
 

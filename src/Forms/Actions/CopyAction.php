@@ -1,9 +1,9 @@
 <?php
 
-namespace Webbingbrasil\FilamentCopyActions\Forms\Actions;
+namespace NhanChauKP\FilamentCopyActions\Forms\Actions;
 
-use Webbingbrasil\FilamentCopyActions\Concerns\HasCopyable;
-use Filament\Forms\Components\Actions\Action as BaseAction;
+use Filament\Actions\Action as BaseAction;
+use NhanChauKP\FilamentCopyActions\Concerns\HasCopyable;
 
 class CopyAction extends BaseAction
 {
@@ -14,7 +14,7 @@ class CopyAction extends BaseAction
     public function getCopyable(): ?string
     {
         if ($this->copyable === null) {
-            return $this->evaluate(fn ($component) => '$wire.'.$component->getStatePath());
+            return $this->evaluate(fn ($state) => $state);
         }
 
         return $this->getDefaultCopyable();

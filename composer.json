@@ -1,32 +1,34 @@
 {
-    "name": "webbingbrasil/filament-copyactions",
+    "name": "nhanchaukp/filament-copyactions",
     "description": "A easy-to-use copy actions for Filament Admin.",
     "keywords": [
         "laravel",
-        "filament"
+        "filament",
+        "filamentphp"
     ],
-    "homepage": "https://github.com/webbingbrasil/filament-copyactions",
+    "homepage": "https://github.com/nhanchaukp/filament-copyactions",
     "license": "MIT",
     "authors": [
         {
-            "name": "Danilo Andrade",
-            "email": "danilo@webbingbrasil.com.br",
-            "role": "Developer"
+            "name": "Nhan Chau KP",
+            "email": "nhanchauthai@gmail.com",
+            "role": "Developer",
+            "homepage": "https://fcode.vn"
         }
     ],
     "require": {
         "php": "^8.0",
-        "filament/filament": "^3.0"
+        "filament/filament": "^4.0"
     },
     "autoload": {
         "psr-4": {
-            "Webbingbrasil\\FilamentCopyActions\\": "src"
+            "NhanChauKP\\FilamentCopyActions\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Webbingbrasil\\FilamentCopyActions\\FilamentCopyActionsProvider"
+                "NhanChauKP\\FilamentCopyActions\\FilamentCopyActionsProvider"
             ]
         }
     },

@@ -1,12 +1,10 @@
 <?php
 
-namespace Webbingbrasil\FilamentCopyActions;
+namespace NhanChauKP\FilamentCopyActions;
 
-use Filament\Facades\Filament;
-use Illuminate\Support\HtmlString;
-use Webbingbrasil\FilamentCopyActions\Forms\Actions\CopyAction;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
+use NhanChauKP\FilamentCopyActions\Forms\Actions\CopyAction;
 
 class FilamentCopyActionsPlugin implements Plugin
 {
@@ -27,6 +25,6 @@ class FilamentCopyActionsPlugin implements Plugin
 
     public function boot(Panel $panel): void
     {
-        CopyAction::configureUsing(fn (CopyAction $action) => $action->copyable(fn ($component) => $component->getState()));
+        CopyAction::configureUsing(fn (CopyAction $action) => $action->copyable(fn ($component, $record) => $component->getState()));
     }
 }

@@ -1,7 +1,18 @@
 # Filament Copy Actions
 
 > **Note**
-> For **Filament 2.x** use **[2.x](https://github.com/webbingbrasil/filament-copyactions/tree/2.x)** branch
+> For **Filament 2.x** use **[2.x](https://github.com/nhanchaukp/filament-copyactions/tree/2.x)** branch
+> For **Filament 4.x** use **[4.x](https://github.com/nhanchaukp/filament-copyactions/tree/4.x)** branch
+> For **Filament 4.x** use **[4.x](https://github.com/nhanchaukp/filament-copyactions/tree/4.x)** branch
+> For **Filament 4.x** use **[4.x](https://github.com/nhanchaukp/filament-copyactions/tree/4.x)** branch
+> For **Filament 4.x** use **[4.x](https://github.com/nhanchaukp/filament-copyactions/tree/4.x)** branch
+> For **Filament 4.x** use **[4.x](https://github.com/nhanchaukp/filament-copyactions/tree/4.x)** branch
+> For **Filament 4.x** use **[4.x](https://github.com/nhanchaukp/filament-copyactions/tree/4.x)** branch
+> For **Filament 4.x** use **[4.x](https://github.com/nhanchaukp/filament-copyactions/tree/4.x)** branch
+> For **Filament 4.x** use **[4.x](https://github.com/nhanchaukp/filament-copyactions/tree/4.x)** branch
+> For **Filament 4.x** use **[4.x](https://github.com/nhanchaukp/filament-copyactions/tree/4.x)** branch
+> For **Filament 4.x** use **[4.x](https://github.com/nhanchaukp/filament-copyactions/tree/4.x)** branch
+> For **Filament 4.x** use **[4.x](https://github.com/nhanchaukp/filament-copyactions/tree/4.x)** branch
 
 An easy-to-use copy actions for Filament Admin
 
@@ -17,7 +28,7 @@ An easy-to-use copy actions for Filament Admin
 ## Installation
 
 ```bash
-composer require webbingbrasil/filament-copyactions
+composer require nhanchaukp/filament-copyactions
 ```
 
 ## Usage
@@ -27,7 +38,7 @@ composer require webbingbrasil/filament-copyactions
 Display a table text column with a copy button, the column has all features of the [TextColumn](https://filamentphp.com/docs/2.x/tables/columns#text-column) and the copy action sends column content to the clipboard and displays a success tooltip.
 
 ```php
-use Webbingbrasil\FilamentCopyActions\Tables\CopyableTextColumn;
+use NhanChauKP\FilamentCopyActions\Tables\CopyableTextColumn;
 
 CopyableTextColumn::make('brand.name')
     ->copyMessage('Brand copied to clipboard')
@@ -51,7 +62,7 @@ You can customize the icon with the `icon`, `iconPosition` and `iconColor` metho
 You can display the column hidding the text content and only showing the copy icon: 
 
 ```php
-use Webbingbrasil\FilamentCopyActions\Tables\CopyableTextColumn;
+use NhanChauKP\FilamentCopyActions\Tables\CopyableTextColumn;
 
 CopyableTextColumn::make('brand.name')->onlyIcon()
 ```
@@ -61,7 +72,7 @@ CopyableTextColumn::make('brand.name')->onlyIcon()
 Display a table action button, you set the content using the `copyable` method. You can customize the button icon/color using the same methods of the [Filament Action](https://filamentphp.com/docs/2.x/tables/actions#setting-a-color).
 
 ```php
-use Webbingbrasil\FilamentCopyActions\Tables\Actions\CopyAction;
+use NhanChauKP\FilamentCopyActions\Tables\Actions\CopyAction;
 
 $table
     ->actions([
@@ -79,7 +90,7 @@ The action will display a copy status, you can customize the success message wit
 Use the `CopyAction` in your field suffix or prefix if you want to copy a field value. You can customize the button icon/color using the same methods of the [Filament Action](https://filamentphp.com/docs/2.x/tables/actions#setting-a-color).
 
 ```php
-use Webbingbrasil\FilamentCopyActions\Forms\Actions\CopyAction;
+use NhanChauKP\FilamentCopyActions\Forms\Actions\CopyAction;
 
 Forms\Components\TextInput::make('sku')
     ->label('SKU (Stock Keeping Unit)')
@@ -96,7 +107,7 @@ You can use this form action in any filament field, the action will copy the fie
 
 
 ```php
-use Webbingbrasil\FilamentCopyActions\Forms\Actions\CopyAction;
+use NhanChauKP\FilamentCopyActions\Forms\Actions\CopyAction;
 
 Forms\Components\Select::make('shop_brand_id')
     ->relationship('brand', 'name')
@@ -113,7 +124,7 @@ The action will display a copy status, you can customize the success message wit
 You can add `CopyAction` button to any page in filament, just put the action in the `actions` method of the page. You can customize the button icon/color using the same methods of the [Filament Action](https://filamentphp.com/docs/2.x/tables/actions#setting-a-color).
 
 ```php
-use Webbingbrasil\FilamentCopyActions\Pages\Actions\CopyAction;
+use NhanChauKP\FilamentCopyActions\Pages\Actions\CopyAction;
 
 protected function getActions(): array
 {

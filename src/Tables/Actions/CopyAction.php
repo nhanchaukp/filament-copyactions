@@ -1,9 +1,9 @@
 <?php
 
-namespace Webbingbrasil\FilamentCopyActions\Tables\Actions;
+namespace NhanChauKP\FilamentCopyActions\Tables\Actions;
 
-use Webbingbrasil\FilamentCopyActions\Concerns\HasCopyable;
-use Filament\Tables\Actions\Action as BaseAction;
+use Filament\Actions\Action as BaseAction;
+use NhanChauKP\FilamentCopyActions\Concerns\HasCopyable;
 
 class CopyAction extends BaseAction
 {
