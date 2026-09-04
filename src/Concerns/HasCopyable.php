@@ -65,6 +65,6 @@ trait HasCopyable
      */
     public function getCopyable(): ?string
     {
-        return JS::from($this->evaluate($this->copyable));
+        return Js::from($this->evaluate($this->copyable));
     }
 }
